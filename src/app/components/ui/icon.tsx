@@ -1,6 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
-export const MoonIcon = function () {
-  return <FontAwesomeIcon icon={faMoon} />;
+interface ThemeIcon {
+  mode: 'light' | 'dark';
+}
+
+export const MoonIcon = function ({ mode, ...props }: ThemeIcon) {
+  if (mode === 'light') {
+    return <FontAwesomeIcon icon={faSun} {...props} />;
+  } else {
+    return <FontAwesomeIcon icon={faMoon} {...props} />;
+  }
 };
