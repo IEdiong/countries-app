@@ -1,12 +1,13 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Nunito } from 'next/font/google';
 import Header from '@/components/header';
 import Script from 'next/script';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
+const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' });
 
 export const metadata = {
   title: 'Where in the world? | Home',
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${nunito.variable} font-sans`}>
         <Header />
         {children}
       </body>
