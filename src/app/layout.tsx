@@ -1,6 +1,10 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import Header from '@/components/ui/header';
+import Header from '@/components/header';
+import Script from 'next/script';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +24,7 @@ export default function RootLayout({
         <Header />
         {children}
       </body>
+      <Script src="https://kit.fontawesome.com/ac47983efe.js" />
     </html>
   );
 }
