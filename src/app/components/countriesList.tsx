@@ -1,4 +1,4 @@
-import Card from './ui/card-1';
+import Card from './ui/card';
 
 const CountriesList = () => {
   return (
