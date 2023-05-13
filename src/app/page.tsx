@@ -1,5 +1,5 @@
-import CountriesList from './components/CountriesList';
-import CountriesToolbar from './components/CountriesToolbar';
+import CountriesList from './components/countriesList';
+import CountriesToolbar from './components/countriesToolbar';
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
-import Filter from './ui/Filter';
-import SearchBar from './ui/SearchBar';
+import Filter from './ui/filter';
+import SearchBar from './ui/searchBar';
 
 const CountriesToolbar = () => {
   return (
