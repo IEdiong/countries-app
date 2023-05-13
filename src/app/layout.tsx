@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Script from 'next/script';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { ThemeProvider } from './components/themeProvider';
 config.autoAddCss = false;
 
 const nunito = Nunito({
@@ -23,12 +24,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${nunito.variable} font-sans text-v-dark-blue dark:text-white bg-v-light-gray dark:bg-v-dark-blue-bg`}
       >
-        <Header />
-        {children}
+        <ThemeProvider attribute="class">
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
       <Script src="https://kit.fontawesome.com/ac47983efe.js" />
     </html>

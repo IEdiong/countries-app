@@ -1,7 +1,6 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import ThemeToggler from './ui/themeToggler';
-// import { MoonIcon } from './ui/icon';
 
 const Header = () => {
   return (
