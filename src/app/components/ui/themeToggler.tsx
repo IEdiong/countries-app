@@ -1,5 +1,7 @@
+'use client';
 import { FC, useEffect, useState } from 'react';
-import { MoonIcon } from './icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from 'next-themes';
 
 const ThemeToggler: FC = () => {
@@ -20,7 +22,7 @@ const ThemeToggler: FC = () => {
         className="capitalize flex gap-2 items-center"
         onClick={() => setTheme('dark')}
       >
-        <MoonIcon mode="dark" />
+        <FontAwesomeIcon icon={faMoon} />
         <span>dark mode</span>
       </button>
     );
@@ -30,7 +32,7 @@ const ThemeToggler: FC = () => {
         className="capitalize flex gap-2 items-center"
         onClick={() => setTheme('light')}
       >
-        <MoonIcon mode="light" />
+        <FontAwesomeIcon icon={faSun} />
         <span>light mode</span>
       </button>
     );
