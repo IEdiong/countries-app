@@ -4,10 +4,14 @@ import Header from '@/components/header';
 import Script from 'next/script';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-config.autoAddCss = false;
 import { ThemeProvider } from './components/themeProvider';
+config.autoAddCss = false;
 
-const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' });
+const nunito = Nunito({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-nunito',
+});
 
 export const metadata = {
   title: 'Where in the world? | Home',
@@ -20,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${nunito.variable} font-sans text-v-dark-blue bg-v-light-gray dark:bg-v-dark-blue-bg dark:text-white`}
+        className={`${nunito.variable} font-sans text-v-dark-blue dark:text-white bg-v-light-gray dark:bg-v-dark-blue-bg`}
       >
         <ThemeProvider attribute="class">
           <Header />

@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-nunito)'],
+      },
       colors: {
         // light mode colors
         'v-dark-blue': 'hsl(200, 15%, 8%)', // text
@@ -20,14 +23,6 @@ module.exports = {
 
         // dark Mode Text & Light Mode Elements
         white: 'hsl(0, 0%, 100%)',
-      },
-      fontFamily: {
-        sans: ['var(--font-nunito)'],
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
