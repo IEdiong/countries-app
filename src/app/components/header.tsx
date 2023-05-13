@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import ThemeToggler from './ui/themeToggler';
 // import { MoonIcon } from './ui/icon';
 
 const Header = () => {
@@ -10,11 +11,12 @@ const Header = () => {
           <h1 className="font-extrabold dark:text-white">
             Where in the world?
           </h1>
+          <ThemeToggler />
 
-          <button className="capitalize flex gap-2 items-center">
+          {/* <button className="capitalize flex gap-2 items-center">
             <FontAwesomeIcon icon={faMoon} />
             <span>dark mode</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </header>
