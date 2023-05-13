@@ -20,20 +20,20 @@ const ThemeToggler: FC = () => {
     return (
       <button
         className="capitalize flex gap-2 items-center"
-        onClick={() => setTheme('dark')}
+        onClick={() => setTheme('light')}
       >
-        <FontAwesomeIcon icon={faMoon} />
-        <span>dark mode</span>
+        <FontAwesomeIcon icon={faSun} />
+        <span>light mode</span>
       </button>
     );
   } else {
     return (
       <button
         className="capitalize flex gap-2 items-center"
-        onClick={() => setTheme('light')}
+        onClick={() => setTheme('dark')}
       >
-        <FontAwesomeIcon icon={faSun} />
-        <span>light mode</span>
+        <FontAwesomeIcon icon={faMoon} />
+        <span>dark mode</span>
       </button>
     );
   }
