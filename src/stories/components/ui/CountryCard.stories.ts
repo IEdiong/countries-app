@@ -10,4 +10,17 @@ const meta: Meta<typeof Card> = {
 export default meta;
 type Story = StoryObj<typeof Card>;
 
-export const Default: Story = {};
+export const Germany: Story = {};
+
+export const Nigeria: Story = {
+  args: {
+    name: 'Nigeria',
+    capital: 'Abuja',
+    region: 'Africa',
+    population: 206139587,
+    flags: {
+      png: 'https://flagcdn.com/w320/ng.png',
+      alt: 'The flag of Nigeria is composed of three equal vertical bands of green, white and green.',
+    },
+  },
+};

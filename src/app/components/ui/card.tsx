@@ -1,58 +1,75 @@
 import Image from 'next/image';
+import '../../../stories/components/ui/countryCard.css';
 
-interface Country {
-  name: string;
-  capital: string;
-  region: string;
-  population: number;
-  flags: {
-    svg: string;
-    png: string;
-  };
+export interface Flags {
+  svg?: string;
+  png: string;
+  alt: string;
 }
 
-const countryData: Country[] = [
-  {
-    name: 'Germany',
-    capital: 'Berlin',
-    region: 'Europe',
-    population: 83240525,
-    flags: {
-      svg: 'https://flagcdn.com/de.svg',
-      png: 'https://flagcdn.com/w320/de.png',
-    },
-  },
-];
+interface CardProps {
+  /**
+   * Country name
+   */
+  name: string;
+  /**
+   * Country capital name
+   */
+  capital: string;
+  /**
+   * The region/continent name
+   */
+  region: string;
+  /**
+   * population of the country
+   */
+  population: number;
+  /**
+   * country flag in .png format with alt text
+   */
+  flags: Flags;
+}
 
-const Card = () => {
-  const country: Country = countryData[0];
+/**
+ * Card UI displaying basic country information
+ */
+const Card = ({
+  name = 'Germany',
+  capital = 'Berlin',
+  region = 'Europe',
+  population = 83240525,
+  flags = {
+    png: 'https://flagcdn.com/w320/de.png',
+    alt: 'The flag of Germany is composed of three equal horizontal bands of black, red and gold.',
+  },
+}: CardProps) => {
   return (
-    <article className="w-64 rounded-md overflow-hidden bg-white drop-shadow-md font-sans">
+    <article className="card w-64 rounded-md overflow-hidden bg-white drop-shadow-md font-sans">
       <div className="card-image">
         <Image
           className="w-full aspect-[5/3]"
-          src={country.flags.png}
-          alt="germany flag"
+          src={flags.png}
+          alt={flags.alt}
           width={320}
           height={192}
         />
       </div>
       <div className="p-6">
-        <h2 className="font-extrabold">{country.name}</h2>
+        <h2 className="font-extrabold">{name}</h2>
         <ul className="my-4">
           <li className="font-semibold">
             Population:{' '}
             <span className="font-light">
               {new Intl.NumberFormat('en-GB', {
                 maximumSignificantDigits: 3,
-              }).format(country.population)}
+              }).format(population)}
             </span>
           </li>
           <li className="font-semibold">
-            Region: <span className="font-light">{country.region}</span>
+            Region: <span className="font-light">{region}</span>
           </li>
           <li className="font-semibold">
-            Capital: <span className="font-light">{country.capital}</span>
+            Capital: <span className="font-light">{capital}</span>
           </li>
         </ul>
       </div>
