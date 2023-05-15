@@ -37,3 +37,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+// ! Next Fonts Optimazition not working on storybook
+// https://github.com/storybookjs/storybook/blob/next/code/frameworks/nextjs/README.md#nextjs-font-optimization
