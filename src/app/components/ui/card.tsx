@@ -27,7 +27,7 @@ const countryData: Country[] = [
 const Card = () => {
   const country: Country = countryData[0];
   return (
-    <article className="w-64 rounded-md overflow-hidden bg-white drop-shadow-md">
+    <article className="w-64 rounded-md overflow-hidden bg-white drop-shadow-md font-sans">
       <div className="card-image">
         <Image
           className="w-full aspect-[5/3]"
@@ -37,9 +37,9 @@ const Card = () => {
           height={192}
         />
       </div>
-      <div className="card-body p-6">
-        <h2 className="card-title font-extrabold">{country.name}</h2>
-        <ul className="card-info my-4">
+      <div className="p-6">
+        <h2 className="font-extrabold">{country.name}</h2>
+        <ul className="my-4">
           <li className="font-semibold">
             Population:{' '}
             <span className="font-light">
