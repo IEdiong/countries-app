@@ -1,12 +1,5 @@
-import Card from './ui/card';
-
 const CountriesList = () => {
-  return (
-    <section>
-      Countries List
-      <Card />
-    </section>
-  );
+  return <section>Countries List</section>;
 };
 
 export default CountriesList;

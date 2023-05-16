@@ -44,7 +44,7 @@ const Card = ({
   },
 }: CardProps) => {
   return (
-    <article className="card w-64 rounded-md overflow-hidden bg-white drop-shadow-md font-sans">
+    <article className="card w-64 rounded-md overflow-hidden bg-white drop-shadow-md dark:text-white dark:bg-dark-blue">
       <div className="card-image">
         <Image
           className="w-full aspect-[5/3]"
