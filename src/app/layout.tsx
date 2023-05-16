@@ -1,5 +1,5 @@
 import './globals.css';
-import { Nunito } from 'next/font/google';
+import { Nunito_Sans } from 'next/font/google';
 import Header from '@/components/header';
 import Script from 'next/script';
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { ThemeProvider } from './components/themeProvider';
 config.autoAddCss = false;
 
-const nunito = Nunito({
+const nunito = Nunito_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-nunito',

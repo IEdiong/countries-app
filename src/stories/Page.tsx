@@ -11,7 +11,7 @@ export const Page: React.FC = () => {
   const [user, setUser] = React.useState<User>();
 
   return (
-    <article>
+    <article className="dark:text-white dark:bg-slate-800 min-h-screen">
       <Header
         user={user}
         onLogin={() => setUser({ name: 'Jane Doe' })}
@@ -19,7 +19,7 @@ export const Page: React.FC = () => {
         onCreateAccount={() => setUser({ name: 'Jane Doe' })}
       />
 
-      <section className="storybook-page">
+      <section className="storybook-page dark:text-white dark:bg-slate-800">
         <h2>Pages in Storybook</h2>
         <p>
           We recommend building UIs with a{' '}

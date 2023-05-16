@@ -17,7 +17,7 @@ export const Header = ({
   onCreateAccount,
 }: HeaderProps) => (
   <header>
-    <div className="storybook-header">
+    <div className="storybook-header dark:text-white dark:bg-slate-800">
       <div>
         <svg
           width="32"
@@ -46,7 +46,7 @@ export const Header = ({
         {user ? (
           <>
             {/* snipped for brevity */}
-            <span className="welcome dark:text-white">
+            <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
             <Button size="small" onClick={onLogout} label="Log out" />
